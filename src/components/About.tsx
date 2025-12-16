@@ -1,7 +1,5 @@
 import { Code2, Rocket, Briefcase, Bot, BookOpen, User } from 'lucide-react';
 
-import bg from '../../public/bg-1.png';
-
 const About = () => {
   const services = [
   {
@@ -42,10 +40,8 @@ const About = () => {
   }
 ];
 
-  
-
   return (
-    <section className="py-20 bg-black/30 inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${bg})` }}>
+    <section className="py-20 bg-black/30 inset-0 bg-cover bg-center" style={{ backgroundImage: `url(/bg-1.png)` }}>
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-white mb-12 text-center">SOBRE MI</h2>
         <div className="max-w-7xl mx-auto text-blue-100 flex flex-col items-center">
