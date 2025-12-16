@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import bg from '../../global/bg-1.png';
+
 interface Skill {
   name: string;
   level: number;
@@ -34,7 +36,7 @@ const Skills = () => {
   );
 
   return (
-    <section className="py-20 bg-black/30 backdrop-blur-sm">
+    <section className="py-20 bg-black/30 backdrop-blur-sm inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${bg})` }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-white mb-12 text-center">Skills</h2>
         
