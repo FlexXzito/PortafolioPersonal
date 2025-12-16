@@ -1,6 +1,6 @@
 import { Code2, Rocket, Briefcase, Bot, BookOpen, User } from 'lucide-react';
 
-import bg from '../../global/bg-1.png';
+import bg from '../../public/bg-1.png';
 
 const About = () => {
   const services = [
@@ -64,7 +64,7 @@ const About = () => {
         </div>
         <div className="mt-10 flex justify-center">
           <a
-            href="../../global/CV_HV DavidFVasquezP.pdf"
+            href="../../public/CV_HV DavidFVasquezP.pdf"
             download
             className="inline-flex items-center px-6 py-3 bg-black hover:scale-110 text-white rounded-lg font-semibold transition-transform transform hover:scale-105"
             target="_blank"

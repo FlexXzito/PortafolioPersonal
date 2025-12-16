@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import bg from '../../global/bg-1.png';
+import bg from '../../public/bg-1.png';
 
 interface Skill {
   name: string;

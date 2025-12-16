@@ -5,7 +5,7 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import { socialLinks } from './components/Hero';
 
-import bg from '../global/bg-1.png';
+import bg from '../public/bg-1.png';
 
 function App() {
   return (

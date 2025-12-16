@@ -1,6 +1,6 @@
 import { Github, Linkedin, Mail, MessageCircle } from 'lucide-react';
 
-import bg from '../../global/bg-1.png';
+import bg from '../../public/bg-1.png';
 
 export const socialLinks = [
   { icon: Github, href: 'https://github.com/FlexXzito', label: 'GitHub', text: 'FlexXzito' },

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { ExternalLink } from 'lucide-react';
 
-import bg from '../../global/bg-1.png';
-import psicology from '../../global/psicology.jpg';
-import juridico from '../../global/juridico.png';
-import ecomerce from '../../global/ecomerce.png';
+import bg from '../../public/bg-1.png';
+import psicology from '../../public/psicology.jpg';
+import juridico from '../../public/juridico.png';
+import ecomerce from '../../public/ecomerce.png';
 
 interface Project {
   id: number;
