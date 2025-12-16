@@ -1,13 +1,24 @@
 import { Code2, Rocket, Briefcase, Bot, BookOpen, User } from 'lucide-react';
 
 const About = () => {
-  const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = '../../public/CV_HV_DavidFVasquezP.pdf';
-    link.download = 'CV_HV_DavidFVasquezP.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const handleDownload = async () => {
+    try {
+      const response = await fetch('/CV_HV_DavidFVasquezP.pdf');
+      if (!response.ok) throw new Error('Archivo no encontrado');
+      
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'CV_HV_DavidFVasquezP.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Error al descargar:', error);
+      alert('No se pudo descargar el archivo. Por favor, inténtalo de nuevo.');
+    }
   };
 
   const services = [
