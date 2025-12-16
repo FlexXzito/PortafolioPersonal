@@ -1,6 +1,15 @@
 import { Code2, Rocket, Briefcase, Bot, BookOpen, User } from 'lucide-react';
 
 const About = () => {
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/CV_HV_DavidFVasquezP.pdf';
+    link.download = 'CV_HV_DavidFVasquezP.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const services = [
   {
     icon: Code2,
@@ -59,10 +68,9 @@ const About = () => {
           </div>
         </div>
         <div className="mt-10 flex justify-center">
-          <a
-            href="/CV_HV_DavidFVasquezP.pdf"
-            download="CV_HV_DavidFVasquezP.pdf"
-            className="inline-flex items-center px-6 py-3 bg-black text-white rounded-lg font-semibold transition-transform hover:scale-105"
+          <button
+            onClick={handleDownload}
+            className="inline-flex items-center px-6 py-3 bg-black text-white rounded-lg font-semibold transition-transform hover:scale-105 cursor-pointer"
           >
             <svg
               className="w-5 h-5 mr-2"
@@ -75,7 +83,7 @@ const About = () => {
               />
             </svg>
             Descargar Hoja de Vida
-          </a>
+          </button>
         </div>
       </div>
     </section>
