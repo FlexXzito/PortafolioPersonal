@@ -1,26 +1,6 @@
 import { Code2, Rocket, Briefcase, Bot, BookOpen, User } from 'lucide-react';
 
 const About = () => {
-  const handleDownload = async () => {
-    try {
-      const response = await fetch('/CV_HV_DavidFVasquezP.pdf');
-      if (!response.ok) throw new Error('Archivo no encontrado');
-      
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = 'CV_HV_DavidFVasquezP.pdf';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      window.URL.revokeObjectURL(url);
-    } catch (error) {
-      console.error('Error al descargar:', error);
-      alert('No se pudo descargar el archivo. Por favor, inténtalo de nuevo.');
-    }
-  };
-
   const services = [
   {
     icon: Code2,
@@ -79,9 +59,10 @@ const About = () => {
           </div>
         </div>
         <div className="mt-10 flex justify-center">
-          <button
-            onClick={handleDownload}
-            className="inline-flex items-center px-6 py-3 bg-black text-white rounded-lg font-semibold transition-transform hover:scale-105 cursor-pointer"
+          <a
+            href="/cv.pdf"
+            download="CV_David_Vasquez.pdf"
+            className="inline-flex items-center px-6 py-3 bg-black text-white rounded-lg font-semibold transition-transform hover:scale-105"
           >
             <svg
               className="w-5 h-5 mr-2"
@@ -94,7 +75,7 @@ const About = () => {
               />
             </svg>
             Descargar Hoja de Vida
-          </button>
+          </a>
         </div>
       </div>
     </section>
