@@ -3,7 +3,7 @@ import { Code2, Rocket, Briefcase, Bot, BookOpen, User } from 'lucide-react';
 const About = () => {
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/CV_HV_DavidFVasquezP.pdf';
+    link.href = '../../public/CV_HV_DavidFVasquezP.pdf';
     link.download = 'CV_HV_DavidFVasquezP.pdf';
     document.body.appendChild(link);
     link.click();
