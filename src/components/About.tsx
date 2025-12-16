@@ -61,9 +61,7 @@ const About = () => {
         <div className="mt-10 flex justify-center">
           <a
             href="/CV_HV_DavidFVasquezP.pdf"
-            download
-            target="_blank"
-            rel="noopener noreferrer"
+            download="CV_HV_DavidFVasquezP.pdf"
             className="inline-flex items-center px-6 py-3 bg-black text-white rounded-lg font-semibold transition-transform hover:scale-105"
           >
             <svg
